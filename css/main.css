@@ -1,5 +1,5 @@
 /* GOOGLE FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Gulzar&family=PT+Serif:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 
 * {
     margin: 0;
@@ -9,16 +9,19 @@
 
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    background-color: rgb(245, 245, 245);
+html {
+    height: 100%;
+}
 
+body {
+    padding: 0;
+    margin-top: 79px !important;
+    background-color: rgb(245, 245, 245);
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100%;
 
-    font-family: 'TT Commons', 'Gulzar', serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
 }
 
@@ -37,6 +40,7 @@ img {
     border-radius: 50px;
     transform: translate(-50%, -50%);
     pointer-events: none;
+    z-index: 999;
 }
 
 .cursor::after,
@@ -77,13 +81,20 @@ img {
 }
 
 .header {
-    margin: 0;
     padding: 14px 0px;
     width: 100%;
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
     background-color: rgb(197, 255, 253);
-    border-radius: 0px 0px 200px 0px;
+}
 
+.sticky {
+    /* backdrop-filter: blur(30px); */
+    transition: all 0.6s ease-in;
+    background-color: rgb(230, 251, 250);
+    box-shadow: 2px 2px 4px #ccc;
 }
 
 .header__navbar_box {
@@ -104,6 +115,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 
 .navbar__button {
@@ -138,11 +150,10 @@ img {
 
 .navbar__link {
     color: #000;
-    text-transform: lowercase;
+    text-transform: capitalize;
     font-size: 15px;
-    font-weight: 400;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .navbar__item_select {
@@ -171,6 +182,16 @@ img {
 
 .navbar__item_button_img {
     margin-right: 8px;
+}
+
+/* main */
+
+/* section hero start */
+.section__hero {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(197, 255, 253);
+    border-radius: 0px 0px 200px 0px;
 }
 
 .header__main {
@@ -223,8 +244,7 @@ img {
     text-align: center;
 }
 
-
-/* main */
+/* section hero end */
 /* projects section */
 .projects__section {
     margin: 0;
@@ -814,6 +834,42 @@ img {
     }
 }
 
+@media screen and (max-width:992px) {
+    .navbar__list {
+        display: none;
+    }
+
+    .showBlock {
+        display: block;
+        position: fixed;
+        top: 14.3%;
+        left: -101%;
+        z-index: 99;
+        width: 80%;
+        backdrop-filter: blur(70px);
+        color: #3c3b3b;
+        height: 100vh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        transition: all 0.4s ease-in;
+        margin: 0;
+        padding: 20px 24px;
+    }
+
+    .showBlock .navbar__item {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .showeffects {
+        transition: all 0.4s ease-in;
+        left: 0%;
+    }
+
+}
+
 @media screen and (max-width:769px) {
     .header__main_left_heading {
         font-size: 60px;
@@ -848,6 +904,7 @@ img {
     .navbar__item+.navbar__item {
         margin-right: 20px;
     }
+
 }
 
 @media screen and (max-width:426px) {
@@ -877,40 +934,22 @@ img {
         font-size: 30px;
     }
 
-    .navbar__list {
-        display: none;
-    }
-
-    .navbar__list {
-        left: -100%;
-    }
-
-    .showBlock {
-        display: block;
-        position: fixed;
-        top: 12%;
-        left: 0%;
-        z-index: 99;
-        width: 80%;
-        background-color: rgb(161, 255, 255);
-        color: #3c3b3b;
-        height: 100vh;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-direction: column;
-        transition: all 0.6s ease-in;
-    }
-
-    .showBlock .navbar__item {
-        margin: 0;
-        padding: 10px;
-    }
-}
-
-@media screen and (max-width:426px) {
     .site__title {
         font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width:360px) {
+    .clientes__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar__item_button {
+        font-size: 15px;
     }
 }
 

@@ -1,9 +1,15 @@
+// responsive functions start
+
 const showButton = document.getElementById("showButton");
 const navbarList = document.querySelector(".navbar__list");
 
 showButton.addEventListener("click", () => {
-  navbarList.classList.toggle("showBlock");
+  navbarList.classList.toggle("showeffects");
 });
+
+// responsive functions end
+
+// cursor effects functions start
 
 const cursor = document.querySelector(".cursor");
 
@@ -30,3 +36,16 @@ window.addEventListener("click", () => {
     cursor.classList.add("click");
   }
 });
+
+
+// cursor effects functions end
+
+// sticy header functions start
+
+const headerstikcy= document.querySelector('.header');
+
+window.addEventListener('scroll' , ()=>{
+  headerstikcy.classList.toggle('sticky' , window.scrollY > 300 , 'px');
+})
+
+// sticy header functions end
