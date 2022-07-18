@@ -843,12 +843,12 @@ img {
     .showBlock {
         display: block;
         position: fixed;
-        top: 14.3%;
+        top: 15%;
         left: -101%;
         z-index: 99;
         width: 80%;
-        backdrop-filter: blur(70px);
         color: #3c3b3b;
+        background-color: rgb(149, 227, 255);
         height: 100vh;
         display: flex;
         align-items: flex-start;
