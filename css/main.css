@@ -490,9 +490,10 @@ img {
 }
 
 .clients__item {
-    margin: 0;
-    padding-top: 50px;
     margin-left: 40px;
+    margin-top: 40px;
+    border: 1px solid #ccc;
+    padding: 10px;
 }
 
 .clientes__item_img {
